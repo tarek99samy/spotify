@@ -1,0 +1,195 @@
+/************************************************** general *************************************/
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/************************************************** custom classes *************************************/
+
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+  display: block;
+  z-index: 1020;
+  position: fixed;
+}
+
+.subheader {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 80px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.nav-item {
+  font-weight: 700;
+  padding: 20px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #1ed760;
+  text-decoration: none;
+}
+
+.logo {
+  height: 50px;
+  display: block;
+  align-self: center;
+}
+
+.logo-div {
+  align-self: center;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  margin-left: 10px;
+  padding: 14px 0;
+}
+
+.nav-button > span {
+  padding: 15px;
+  color: white;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.nav-button > span:hover {
+  color: #1ed760;
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+.nav-photo {
+  border-radius: 50px;
+}
+
+.nav-list {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+.verticalSeparator {
+  display: inline-block;
+  height: 16px;
+  width: 1px;
+  background: white;
+  margin: auto 17px;
+}
+
+#responsive-replacement {
+  display: none;
+  
+}
+
+.responsive-button{
+  cursor: pointer;
+  color: #FFF;
+  display: block;
+  border-radius: 1px;
+  font-size: 30px;
+}
+
+#sid-nav > span{
+  font-size: 35px;
+  position: absolute;
+  display: flex;
+  right: 0px;
+  top: 0px;
+  color: white;
+}
+
+.sidebar-opened-styles{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1200;
+  height: 100%;
+  width: 300px;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+.sidebar-closed-styles{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1200;
+  height: 100%;
+  width: 0px;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+/************************************************** custom media queries *************************************/
+
+@media only screen and (max-width: 900px) {
+  .subheader > nav {
+    display: none;
+  }
+  
+  #responsive-replacement {
+    display: flex;
+  }
+  
+  #responsive-replacement > .nav-link{
+    padding: 0px;
+    display: inline-flex;
+  }
+
+  #responsive-replacement > .nav-button{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  #responsive-replacement > .nav-button > span{
+    padding: 0px;
+  }
+
+  .subheader{
+    height: 55px;
+    padding: 0 10%;
+  }
+
+  .header{
+    background-color: black;
+  }
+  
+  .logo{
+    height: 27px;
+  }
+  
+  .nav-photo{
+    height: 34px;
+    width: 34px;
+    margin: auto 6px auto 10px;
+  }
+}
