@@ -12,15 +12,22 @@ export default class Navbar extends Component {
     super(props);
     this.state = {
       isSidebarOpen: false,
+      isDropdownOpen: false,
     };
 
     this.toggleSidebar = this.toggleSidebar.bind(this);
+    this.toggleProfileDropdown = this.toggleProfileDropdown.bind(this);
   }
 
   toggleSidebar() {
-    console.log(this);
     this.setState((state) => ({
       isSidebarOpen: !state.isSidebarOpen,
+    }));
+  }
+
+  toggleProfileDropdown() {
+    this.setState((state) => ({
+      isDropdownOpen: !state.isDropdownOpen,
     }));
   }
 
@@ -53,10 +60,28 @@ export default class Navbar extends Component {
               </li>
               <li role="separator" className="verticalSeparator"></li>
               <li>
-                <button className="nav-button">
+                <button
+                  className="nav-button"
+                  onClick={this.toggleProfileDropdown}>
                   <img src={navbarPhoto} alt="user" className="nav-photo" />
                   <span>profile</span>
                 </button>
+                {this.state.isDropdownOpen ? (
+                  <div id="profile-dropdown-menu" className="profile-menu">
+                    <ul className="menu">
+                      <li className="nav-item">
+                        <Link to="/" className="profile-item">
+                          Account
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/" className="profile-item">
+                          Log out
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                ) : null}
               </li>
             </ul>
           </nav>
@@ -65,21 +90,25 @@ export default class Navbar extends Component {
             <Link to="/" className="nav-link">
               <img src={navbarPhoto} alt="user" className="nav-photo" />
             </Link>
+
             <button className="nav-button" onClick={this.toggleSidebar}>
-              <span className="responsive-button">&#9776;</span>
+              <span className="open-sidebar-button">&#9776;</span>
             </button>
           </div>
         </div>
 
+        {this.state.isSidebarOpen ? (
+          <div className="responsive-overlay"></div>
+        ) : null}
+
         <div
           id="side-nav"
           className={
-            this.state.isSidebarOpen
-              ? "sidebar-opened-styles"
-              : "sidebar-closed-styles"
-          }
-        >
-          <span onClick={this.toggleSidebar}>&times;</span>
+            this.state.isSidebarOpen ? "sidebar-opened" : "sidebar-closed"
+          }>
+          <div className="close-sidebar-button">
+            <span onClick={this.toggleSidebar}>&times;</span>
+          </div>
           <ul>
             <li className="nav-item">
               <Link className="nav-link" to="/">
@@ -94,6 +123,17 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 Download
+              </Link>
+            </li>
+            <li role="separator" className="horizontal-separator"></li>
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Account
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Log out
               </Link>
             </li>
           </ul>

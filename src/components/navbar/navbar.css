@@ -1,195 +1,253 @@
 /************************************************** general *************************************/
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /************************************************** custom classes *************************************/
 
 .header {
-  background-color: rgba(0, 0, 0, 0.6);
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0;
-  display: block;
-  z-index: 1020;
-  position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0;
+	display: block;
+	z-index: 1020;
+	position: fixed;
 }
 
 .subheader {
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  height: 80px;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	height: 80px;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
 }
 
 .nav-item {
-  font-weight: 700;
-  padding: 20px 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+	font-weight: 700;
+	padding: 20px 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	height: fit-content;
 }
 
 .nav-link {
-  color: white;
+	color: white;
 }
 
 .nav-link:hover {
-  color: #1ed760;
-  text-decoration: none;
+	color: #1ed760;
+	text-decoration: none;
 }
 
 .logo {
-  height: 50px;
-  display: block;
-  align-self: center;
+	height: 40px;
+	display: block;
+	align-self: center;
 }
 
 .logo-div {
-  align-self: center;
+	align-self: center;
 }
 
 .nav-button {
-  background-color: transparent;
-  border: none;
-  display: flex;
-  margin-left: 10px;
-  padding: 14px 0;
+	background-color: transparent;
+	border: none;
+	display: flex;
+	margin-left: 10px;
+	padding: 14px 0;
 }
 
 .nav-button > span {
-  padding: 15px;
-  color: white;
-  font-weight: 700;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+	padding: 15px;
+	color: white;
+	font-weight: 700;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
 }
 
 .nav-button > span:hover {
-  color: #1ed760;
+	color: #1ed760;
 }
 
 .nav-button:focus {
-  outline: none;
+	outline: none;
 }
 
 .nav-photo {
-  border-radius: 50px;
+	border-radius: 50px;
 }
 
 .nav-list {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
 }
 
 .verticalSeparator {
-  display: inline-block;
-  height: 16px;
-  width: 1px;
-  background: white;
-  margin: auto 17px;
+	display: inline-block;
+	height: 16px;
+	width: 1px;
+	background: white;
+	margin: 30px 17px;
+}
+
+.horizontal-separator {
+	height: 2px;
+	width: 30px;
+	background-color: white;
 }
 
 #responsive-replacement {
-  display: none;
-  
+	display: none;
 }
 
-.responsive-button{
-  cursor: pointer;
-  color: #FFF;
-  display: block;
-  border-radius: 1px;
-  font-size: 30px;
+.open-sidebar-button {
+	cursor: pointer;
+	color: #fff;
+	display: block;
+	border-radius: 1px;
+	font-size: 30px;
 }
 
-#sid-nav > span{
-  font-size: 35px;
-  position: absolute;
-  display: flex;
-  right: 0px;
-  top: 0px;
-  color: white;
+.sidebar-opened {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1200;
+	height: 100%;
+	width: 450px;
+	background-color: black;
+	color: white;
+	transition: 0.3s;
+	overflow: auto;
 }
 
-.sidebar-opened-styles{
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1200;
-  height: 100%;
-  width: 300px;
-  background-color: black;
-  color: white;
-  transition: 0.3s;
+.sidebar-opened::-webkit-scrollbar {
+	display: none;
 }
 
-.sidebar-closed-styles{
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1200;
-  height: 100%;
-  width: 0px;
-  background-color: black;
-  color: white;
-  transition: 0.3s;
+.sidebar-closed {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1200;
+	height: 100%;
+	width: 0px;
+	background-color: black;
+	color: white;
+	transition: 0.3s;
+}
+
+.close-sidebar-button {
+	padding: 0px 0 0 20px;
+	width: fit-content;
+	height: fit-content;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.close-sidebar-button:hover {
+	color: #1ed760;
+}
+
+.responsive-overlay {
+	box-sizing: border-box;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background: rgba(0, 0, 0, 0.75);
+	left: 0;
+}
+
+.profile-menu {
+	width: fit-content;
+	height: fit-content;
+	background-color: rgba(255, 255, 255);
+}
+
+.profile-item {
+	color: black;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
 }
 
 /************************************************** custom media queries *************************************/
 
 @media only screen and (max-width: 900px) {
-  .subheader > nav {
-    display: none;
-  }
-  
-  #responsive-replacement {
-    display: flex;
-  }
-  
-  #responsive-replacement > .nav-link{
-    padding: 0px;
-    display: inline-flex;
-  }
+	.subheader > nav {
+		display: none;
+	}
 
-  #responsive-replacement > .nav-button{
-    display: block;
-    padding: 0px;
-    margin: 0px;
-  }
-  
-  #responsive-replacement > .nav-button > span{
-    padding: 0px;
-  }
+	.nav-link {
+		font-size: 35px;
+		padding-left: 0px;
+		margin-left: 0;
+	}
 
-  .subheader{
-    height: 55px;
-    padding: 0 10%;
-  }
+	.nav-item {
+		padding-left: 0px;
+		margin-left: 0;
+	}
 
-  .header{
-    background-color: black;
-  }
-  
-  .logo{
-    height: 27px;
-  }
-  
-  .nav-photo{
-    height: 34px;
-    width: 34px;
-    margin: auto 6px auto 10px;
-  }
+	#responsive-replacement {
+		display: flex;
+	}
+
+	#responsive-replacement > .nav-link {
+		padding: 0px;
+		display: inline-flex;
+	}
+
+	#responsive-replacement > .nav-button {
+		display: block;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	#responsive-replacement > .nav-button > span {
+		padding: 0px;
+	}
+
+	.subheader {
+		height: 55px;
+		padding: 0 10%;
+	}
+
+	.header {
+		background-color: black;
+	}
+
+	.logo {
+		height: 27px;
+	}
+
+	.nav-photo {
+		height: 34px;
+		width: 34px;
+		margin: auto 6px auto 10px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.responsive-overlay {
+		display: none;
+	}
+
+	#side-nav {
+		display: none;
+	}
 }
