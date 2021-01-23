@@ -1,3 +1,4 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
 /************************************************** general *************************************/
 * {
 	box-sizing: border-box;
@@ -173,16 +174,38 @@ a:hover {
 	left: 0;
 }
 
+.menu-item {
+	font-size: 14px;
+	font-weight: 700;
+	font-family: "Cirular std Bold";
+	color: black;
+	padding: 8px 12px;
+}
+
 .profile-menu {
-	width: fit-content;
-	height: fit-content;
+	width: 160px;
+	height: 82px;
 	background-color: rgba(255, 255, 255);
+	border-radius: 3px;
+	text-align: left;
+}
+
+.menu {
+	padding: 0;
 }
 
 .profile-item {
 	color: black;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 16px;
+}
+
+.profile-item:hover {
+	color: #1ed760;
+}
+
+.dropdown-icon {
+	margin-left: 0.5rem;
 }
 
 /************************************************** custom media queries *************************************/
@@ -220,11 +243,13 @@ a:hover {
 
 	#responsive-replacement > .nav-button > span {
 		padding: 0px;
+		font-size: 30px;
+		margin-left: 10px;
 	}
 
 	.subheader {
 		height: 55px;
-		padding: 0 10%;
+		padding: 0 3%;
 	}
 
 	.header {
@@ -249,5 +274,11 @@ a:hover {
 
 	#side-nav {
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.sidebar-opened {
+		width: 100%;
 	}
 }
