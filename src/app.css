@@ -1,0 +1,15 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/01173b246d9d9ea808ea75a26b3b61bb?family=Circular+Spotify+Tx+T+Black);
+
+* {
+	box-sizing: border-box;
+	font-family: "Circular Spotify Tx T Black", "Cirular STD";
+}
+
+li {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Navbar from "../../components/navbar/navbar";
 import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
+// ************************************************
+import logo from "../../assets/logo.png";
+import personalPhoto from "../../assets/profile-photo.png";
 import "./home.css";
 
 export default class Home extends Component {
@@ -10,28 +13,21 @@ export default class Home extends Component {
 	}
 
 	render() {
+		let links = [
+			{ text: "Premium", to: "premium" },
+			{ text: "Support", href: "https://support.spotify.com/eg-en/" },
+			{ text: "Download", to: "download" },
+		];
 		return (
 			<>
-				<Navbar />
-				<div className='banner'>
-					<div>
-						<h1 className='banner-text'>Go Premium. Be happy.</h1>
-					</div>
-					<div>
-						<Link to='/'>
-							<button className='btn-green'>Start Free Trial</button>
-						</Link>
-					</div>
-					<div className='banner-terms'>
-						<p className='terms-text'>
-							*
-							<Link to='/' className='terms-link'>
-								Terms and conditions
-							</Link>
-							apply. Open only to users who haven't already tried Premium.
-						</p>
-					</div>
-				</div>
+				<Navbar
+					bgColor='default'
+					logo={logo}
+					links={links}
+					linkHover='default'
+					personalPhoto={personalPhoto}
+					dropdownContent={[]}
+				/>
 			</>
 		);
 	}
