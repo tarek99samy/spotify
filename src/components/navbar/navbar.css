@@ -20,7 +20,6 @@
 	z-index: 1020;
 	position: fixed;
 	height: var(--navbar-height);
-	display: flex;
 }
 
 .navbar-container {
@@ -45,6 +44,17 @@
 	align-self: center;
 }
 
+.navbar-desktop-view {
+	display: var(--navbar-desktop-view);
+}
+
+.navbar-links-list {
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	height: fit-content;
+}
+
 .navbar-link-container {
 	margin: auto 10px;
 	height: fit-content;
@@ -67,13 +77,6 @@
 	text-decoration: none;
 }
 
-.navbar-links-list {
-	display: inline-flex;
-	margin: 0;
-	padding: 0;
-	height: fit-content;
-}
-
 /************************************/
 
 .navbar-vertical-separator {
@@ -93,7 +96,6 @@
 	border: none;
 	display: flex;
 	margin-left: 10px;
-	/* padding: 14px 0; */
 }
 
 .navbar-button:focus {
@@ -115,67 +117,55 @@
 	margin-left: 0.5rem;
 }
 
-/*
-.horizontal-separator {
-	height: 2px;
-	width: 30px;
-	background-color: white;
+.navbar-dropdown-container {
+	width: 160px;
+	height: 82px;
+	background-color: rgba(255, 255, 255);
+	border-radius: 3px;
+	text-align: left;
+	position: absolute;
+	top: 94%;
 }
 
-#responsive-replacement {
-	display: none;
+.navbar-dropdown {
+	padding: 0;
 }
 
-.open-sidebar-button {
-	cursor: pointer;
-	color: #fff;
-	display: block;
-	border-radius: 1px;
-	font-size: 30px;
+.navbar-dropdown::before {
+	content: "";
+	height: 16px;
+	width: 32px;
+	position: absolute;
+	right: 2px;
+	top: -12px;
+	border-bottom: 16px solid #fff;
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
 }
 
-.sidebar-opened {
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1200;
-	height: 100%;
-	width: 450px;
-	background-color: black;
-	color: white;
-	transition: 0.3s;
-	overflow: auto;
+.navbar-dropdown-item {
+	font-size: 14px;
+	font-weight: 700;
+	color: black;
+	padding: 8px 12px;
 }
 
-.sidebar-opened::-webkit-scrollbar {
-	display: none;
+.navbar-dropdown-link {
+	color: black;
+	font-size: 16px;
 }
 
-.sidebar-closed {
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1200;
-	height: 100%;
-	width: 0px;
-	background-color: black;
-	color: white;
-	transition: 0.3s;
-}
-
-.close-sidebar-button {
-	padding: 0px 0 0 20px;
-	width: fit-content;
-	height: fit-content;
-	font-size: 30px;
-	cursor: pointer;
-}
-
-.close-sidebar-button:hover {
+.navbar-dropdown-link:hover {
 	color: #1ed760;
 }
 
-.responsive-overlay {
+/************************************/
+
+.navbar-mobile-view {
+	display: var(--navbar-mobile-view);
+}
+
+.overlay {
 	box-sizing: border-box;
 	display: block;
 	width: 100vw;
@@ -186,37 +176,13 @@
 	left: 0;
 }
 
-.menu-item {
-	font-size: 14px;
-	font-weight: 700;
-	
-	color: black;
-	padding: 8px 12px;
+.navbar-toggle-sidebar {
+	cursor: pointer;
+	color: #fff;
+	display: block;
+	border-radius: 1px;
+	font-size: 30px;
 }
-
-.profile-menu {
-	width: 160px;
-	height: 82px;
-	background-color: rgba(255, 255, 255);
-	border-radius: 3px;
-	text-align: left;
-}
-
-.menu {
-	padding: 0;
-}
-
-.profile-item {
-	color: black;
-	
-	font-size: 16px;
-}
-
-.profile-item:hover {
-	color: #1ed760;
-}
-
- */
 
 /************************************************** media queries *************************************/
 
@@ -224,81 +190,18 @@
 	:root {
 		--navbar-height: 54px;
 		--navbar-logo-height: 27px;
+		--navbar-mobile-view: flex;
+		--navbar-desktop-view: none;
 	}
 
 	.navbar-default,
 	.navbar-transparent {
 		background-color: black;
 	}
-	/* 
-	.subheader > nav {
-		display: none;
-	}
-
-	.nav-link {
-		font-size: 35px;
-		padding-left: 0px;
-		margin-left: 0;
-	}
-
-	.nav-item {
-		padding-left: 0px;
-		margin-left: 0;
-	}
-
-	#responsive-replacement {
-		display: flex;
-	}
-
-	#responsive-replacement > .nav-link {
-		padding: 0px;
-		display: inline-flex;
-	}
-
-	#responsive-replacement > .nav-button {
-		display: block;
-		padding: 0px;
-		margin: 0px;
-	}
-
-	#responsive-replacement > .nav-button > span {
-		padding: 0px;
-		font-size: 30px;
-		margin-left: 10px;
-	}
-
-	.subheader {
-		height: 55px;
-		padding: 0 3%;
-	}
-
-	.header {
-		background-color: black;
-	}
-
-	.logo {
-		height: 27px;
-	}
-
-	.nav-photo {
-		height: 34px;
-		width: 34px;
-		margin: auto 6px auto 10px;
-	} */
 }
-/* 
+
 @media only screen and (min-width: 900px) {
-	.responsive-overlay {
-		display: none;
-	}
-
-	#side-nav {
+	.overlay {
 		display: none;
 	}
 }
-
-@media only screen and (max-width: 500px) {
-	.sidebar-opened {
-		width: 100%;
-	}
-} */

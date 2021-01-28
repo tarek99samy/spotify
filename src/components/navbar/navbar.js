@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import authContext from "../../context/auth";
 import { Link } from "react-router-dom";
+import Sidebar from "../sidebar/sidebar";
 // ----------------- importing style sheets in strict order --------------------
 import "../../variables.css";
 import "./navbar.css";
@@ -40,7 +41,7 @@ export default class Navbar extends Component {
 						</Link>
 					</div>
 
-					<nav>
+					<nav className='navbar-desktop-view'>
 						<ul className='navbar-links-list'>
 							{this.props.links.map((data, i) => (
 								<li className='navbar-link-container' key={i}>
@@ -66,78 +67,46 @@ export default class Navbar extends Component {
 									<span className='navbar-button-text'>
 										profile
 										{this.state.isDropdownOpen ? (
-											<span className='navbar-dropdown-icon'>&#8743;</span>
+											<span className='navbar-dropdown-icon'>&#8593;</span>
 										) : (
-											<span className='navbar-dropdown-icon'>&#8744;</span>
+											<span className='navbar-dropdown-icon'>&#8595;</span>
 										)}
 									</span>
 								</button>
-								{/* {this.state.isDropdownOpen ? (
-									<div id='profile-dropdown-menu' className='profile-menu'>
-										<ul className='menu'>
-											<li className='menu-item'>
-												<Link to='/' className='profile-item'>
-													Account
-												</Link>
-											</li>
-											<li className='menu-item'>
-												<Link to='/' className='profile-item'>
-													Log out
-												</Link>
-											</li>
+								{this.state.isDropdownOpen ? (
+									<div className='navbar-dropdown-container'>
+										<ul className='navbar-dropdown'>
+											{this.props.dropdownContent.map((item, index) => (
+												<li className='navbar-dropdown-item'>
+													<Link to={`/${item.href}`} className='navbar-dropdown-link'>
+														{item.text}
+													</Link>
+												</li>
+											))}
 										</ul>
 									</div>
-								) : null} */}
+								) : null}
 							</li>
 						</ul>
 					</nav>
 
-					{/*<div id='responsive-replacement'>
-						<Link to='/' className='nav-link'>
-							<img src={navbarPhoto} alt='user' className='nav-photo' />
+					<div className='navbar-mobile-view'>
+						<Link to='/account' className=''>
+							<img src={this.props.personalPhoto} alt='user' className='navbar-personal-photo' />
 						</Link>
 
-						<button className='nav-button' onClick={this.toggleSidebar}>
-							<span className='open-sidebar-button'>&#9776;</span>
+						<button className='navbar-button' onClick={this.toggleSidebar}>
+							<span className='navbar-toggle-sidebar'>&#9776;</span>
 						</button>
-					</div> */}
+					</div>
 				</div>
 
-				{/* {this.state.isSidebarOpen ? <div className='responsive-overlay'></div> : null}
-
-				<div id='side-nav' className={this.state.isSidebarOpen ? "sidebar-opened" : "sidebar-closed"}>
-					<div className='close-sidebar-button'>
-						<span onClick={this.toggleSidebar}>&times;</span>
-					</div>
-					<ul>
-						<li className='nav-item'>
-							<Link className='nav-link' to='/'>
-								Premium
-							</Link>
-						</li>
-						<li className='nav-item'>
-							<Link className='nav-link' to='/'>
-								Support
-							</Link>
-						</li>
-						<li className='nav-item'>
-							<Link className='nav-link' to='/'>
-								Download
-							</Link>
-						</li>
-						<li role='separator' className='horizontal-separator'></li>
-						<li className='nav-item'>
-							<Link to='/' className='nav-link'>
-								Account
-							</Link>
-						</li>
-						<li className='nav-item'>
-							<Link to='/' className='nav-link'>
-								Log out
-							</Link>
-						</li>
-					</ul>
-				</div> */}
+				{this.state.isSidebarOpen ? (
+					<>
+						<Sidebar content={this.props.links.concat(this.props.dropdownContent)} />
+						<div className='overlay'></div>
+					</>
+				) : null}
 			</header>
 		);
 	}

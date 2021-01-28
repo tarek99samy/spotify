@@ -11,6 +11,7 @@ export default class Home extends Component {
 		super(props);
 		this.state = {};
 	}
+	// logout will be a stand alone url and handle the actual logic in app.js
 
 	render() {
 		let links = [
@@ -26,7 +27,10 @@ export default class Home extends Component {
 					links={links}
 					linkHover='default'
 					personalPhoto={personalPhoto}
-					dropdownContent={[]}
+					dropdownContent={[
+						{ text: "Account", href: "account" },
+						{ text: "Log out", href: "logout" },
+					]}
 				/>
 			</>
 		);

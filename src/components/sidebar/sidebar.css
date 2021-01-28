@@ -1,0 +1,103 @@
+.horizontal-separator {
+	height: 2px;
+	width: 30px;
+	background-color: white;
+}
+
+.sidebar-opened {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1200;
+	height: 100%;
+	width: 450px;
+	background-color: black;
+	color: white;
+	transition: 0.3s;
+	overflow: auto;
+}
+
+.sidebar-opened::-webkit-scrollbar {
+	display: none;
+}
+
+.sidebar-closed {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1200;
+	height: 100%;
+	width: 0px;
+	background-color: black;
+	color: white;
+	transition: 0.3s;
+}
+
+.close-sidebar-button {
+	padding: 0px 0 0 20px;
+	width: fit-content;
+	height: fit-content;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.close-sidebar-button:hover {
+	color: #1ed760;
+}
+
+.subheader > nav {
+	display: none;
+}
+
+.nav-link {
+	font-size: 35px;
+	padding-left: 0px;
+	margin-left: 0;
+}
+
+.nav-item {
+	padding-left: 0px;
+	margin-left: 0;
+}
+
+.navbar-responsive-container > .nav-link {
+	padding: 0px;
+	display: inline-flex;
+}
+
+.navbar-responsive-container > .nav-button {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar-responsive-container > .nav-button > span {
+	padding: 0px;
+	font-size: 30px;
+	margin-left: 10px;
+}
+
+.subheader {
+	height: 55px;
+	padding: 0 3%;
+}
+
+.header {
+	background-color: black;
+}
+
+.logo {
+	height: 27px;
+}
+
+.nav-photo {
+	height: 34px;
+	width: 34px;
+	margin: auto 6px auto 10px;
+}
+
+@media only screen and (max-width: 500px) {
+	.sidebar-opened {
+		width: 100%;
+	}
+}
