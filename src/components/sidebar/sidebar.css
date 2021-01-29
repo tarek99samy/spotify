@@ -1,103 +1,101 @@
-.horizontal-separator {
-	height: 2px;
-	width: 30px;
-	background-color: white;
-}
-
-.sidebar-opened {
+.sidebar-active {
 	position: fixed;
 	right: 0;
 	top: 0;
 	z-index: 1200;
 	height: 100%;
-	width: 450px;
+	width: var(--sidebar-width);
 	background-color: black;
 	color: white;
 	transition: 0.3s;
 	overflow: auto;
 }
 
-.sidebar-opened::-webkit-scrollbar {
+.sidebar-active::-webkit-scrollbar {
 	display: none;
 }
 
-.sidebar-closed {
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1200;
-	height: 100%;
+.sidebar-inactive {
 	width: 0px;
-	background-color: black;
-	color: white;
-	transition: 0.3s;
 }
 
-.close-sidebar-button {
+.sidebar-content {
+	margin-top: var(--navbar-height);
+}
+
+/***********************************/
+
+.horizontal-separator {
+	height: 2px;
+	width: 30px;
+	background-color: white;
+	margin: 10px 0 40px 0;
+}
+
+.sidebar-toggle {
 	padding: 0px 0 0 20px;
 	width: fit-content;
 	height: fit-content;
 	font-size: 30px;
 	cursor: pointer;
+	color: #fff;
+	border-radius: 1px;
 }
 
-.close-sidebar-button:hover {
-	color: #1ed760;
+.sidebar-close-icon {
+	position: absolute;
+	right: 20px;
+	top: 10px;
 }
 
-.subheader > nav {
-	display: none;
-}
-
-.nav-link {
-	font-size: 35px;
-	padding-left: 0px;
-	margin-left: 0;
-}
-
-.nav-item {
-	padding-left: 0px;
-	margin-left: 0;
-}
-
-.navbar-responsive-container > .nav-link {
-	padding: 0px;
-	display: inline-flex;
-}
-
-.navbar-responsive-container > .nav-button {
+.overlay {
+	box-sizing: border-box;
 	display: block;
-	padding: 0px;
-	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background: rgba(0, 0, 0, 0.75);
+	left: 0;
 }
 
-.navbar-responsive-container > .nav-button > span {
-	padding: 0px;
-	font-size: 30px;
-	margin-left: 10px;
+/************************************/
+
+.sidebar-item {
+	padding-bottom: 25px;
+	height: 61px;
 }
 
-.subheader {
-	height: 55px;
-	padding: 0 3%;
+.sidebar-link-lg {
+	font-size: 36px;
+	font-weight: 700;
 }
 
-.header {
-	background-color: black;
+.sidebar-link-md {
+	font-size: 28px;
+	font-weight: 400;
 }
 
-.logo {
-	height: 27px;
+.sidebar-link {
+	letter-spacing: 0px;
+	color: white;
+	line-height: 60px;
 }
 
-.nav-photo {
-	height: 34px;
-	width: 34px;
-	margin: auto 6px auto 10px;
+.sidebar-link:hover {
+	color: var(--default-hover-color);
 }
+
+/************************************************** media queries *************************************/
 
 @media only screen and (max-width: 500px) {
-	.sidebar-opened {
-		width: 100%;
+	:root {
+		--sidebar-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.overlay {
+		display: none;
 	}
 }

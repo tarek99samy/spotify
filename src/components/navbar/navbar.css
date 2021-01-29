@@ -55,7 +55,7 @@
 	height: fit-content;
 }
 
-.navbar-link-container {
+.navbar-item {
 	margin: auto 10px;
 	height: fit-content;
 }
@@ -68,7 +68,7 @@
 }
 
 .navbar-link-default-hover:hover {
-	color: #1ed760;
+	color: var(--default-hover-color);
 	text-decoration: none;
 }
 
@@ -89,6 +89,8 @@
 
 .navbar-personal-photo {
 	border-radius: 50px;
+	height: var(--navbar-personal-photo-size);
+	width: var(--navbar-personal-photo-size);
 }
 
 .navbar-button {
@@ -96,6 +98,7 @@
 	border: none;
 	display: flex;
 	margin-left: 10px;
+	align-items: center;
 }
 
 .navbar-button:focus {
@@ -110,7 +113,7 @@
 }
 
 .navbar-button-text:hover {
-	color: #1ed760;
+	color: var(--default-hover-color);
 }
 
 .navbar-dropdown-icon {
@@ -156,32 +159,14 @@
 }
 
 .navbar-dropdown-link:hover {
-	color: #1ed760;
+	color: var(--default-hover-color);
 }
 
 /************************************/
 
 .navbar-mobile-view {
 	display: var(--navbar-mobile-view);
-}
-
-.overlay {
-	box-sizing: border-box;
-	display: block;
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	background: rgba(0, 0, 0, 0.75);
-	left: 0;
-}
-
-.navbar-toggle-sidebar {
-	cursor: pointer;
-	color: #fff;
-	display: block;
-	border-radius: 1px;
-	font-size: 30px;
+	align-items: center;
 }
 
 /************************************************** media queries *************************************/
@@ -192,16 +177,12 @@
 		--navbar-logo-height: 27px;
 		--navbar-mobile-view: flex;
 		--navbar-desktop-view: none;
+
+		--navbar-personal-photo-size: 34px;
 	}
 
 	.navbar-default,
 	.navbar-transparent {
 		background-color: black;
-	}
-}
-
-@media only screen and (min-width: 900px) {
-	.overlay {
-		display: none;
 	}
 }

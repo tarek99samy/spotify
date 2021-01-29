@@ -1,6 +1,11 @@
 :root {
+	--default-hover-color: #1ed760;
+
 	--navbar-height: 80px;
 	--navbar-logo-height: 40px;
 	--navbar-mobile-view: none;
 	--navbar-desktop-view: block;
+	--navbar-personal-photo-size: 40px;
+
+	--sidebar-width: 450px;
 }

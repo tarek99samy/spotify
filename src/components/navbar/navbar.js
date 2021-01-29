@@ -11,18 +11,10 @@ export default class Navbar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isSidebarOpen: false,
 			isDropdownOpen: false,
 		};
 
-		this.toggleSidebar = this.toggleSidebar.bind(this);
 		this.toggleDropdown = this.toggleDropdown.bind(this);
-	}
-
-	toggleSidebar() {
-		this.setState((state) => ({
-			isSidebarOpen: !state.isSidebarOpen,
-		}));
 	}
 
 	toggleDropdown() {
@@ -44,7 +36,7 @@ export default class Navbar extends Component {
 					<nav className='navbar-desktop-view'>
 						<ul className='navbar-links-list'>
 							{this.props.links.map((data, i) => (
-								<li className='navbar-link-container' key={i}>
+								<li className='navbar-item' key={i}>
 									{"href" in data ? (
 										<a
 											href={`${data.href}`}
@@ -61,7 +53,7 @@ export default class Navbar extends Component {
 								</li>
 							))}
 							<li role='separator' className='navbar-vertical-separator'></li>
-							<li className='navbar-link-container'>
+							<li className='navbar-item'>
 								<button className='navbar-button' onClick={this.toggleDropdown}>
 									<img src={this.props.personalPhoto} alt='user' className='navbar-personal-photo' />
 									<span className='navbar-button-text'>
@@ -78,7 +70,7 @@ export default class Navbar extends Component {
 										<ul className='navbar-dropdown'>
 											{this.props.dropdownContent.map((item, index) => (
 												<li className='navbar-dropdown-item'>
-													<Link to={`/${item.href}`} className='navbar-dropdown-link'>
+													<Link to={`/${item.to}`} className='navbar-dropdown-link'>
 														{item.text}
 													</Link>
 												</li>
@@ -91,22 +83,13 @@ export default class Navbar extends Component {
 					</nav>
 
 					<div className='navbar-mobile-view'>
-						<Link to='/account' className=''>
+						<Link to='/account'>
 							<img src={this.props.personalPhoto} alt='user' className='navbar-personal-photo' />
 						</Link>
 
-						<button className='navbar-button' onClick={this.toggleSidebar}>
-							<span className='navbar-toggle-sidebar'>&#9776;</span>
-						</button>
+						<Sidebar content={{ lg: this.props.links, md: this.props.dropdownContent }} />
 					</div>
 				</div>
-
-				{this.state.isSidebarOpen ? (
-					<>
-						<Sidebar content={this.props.links.concat(this.props.dropdownContent)} />
-						<div className='overlay'></div>
-					</>
-				) : null}
 			</header>
 		);
 	}

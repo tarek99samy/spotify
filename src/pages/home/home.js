@@ -19,6 +19,12 @@ export default class Home extends Component {
 			{ text: "Support", href: "https://support.spotify.com/eg-en/" },
 			{ text: "Download", to: "download" },
 		];
+
+		let dropdownContent = [
+			{ text: "Account", to: "account" },
+			{ text: "Log out", to: "logout" },
+		];
+
 		return (
 			<>
 				<Navbar
@@ -27,10 +33,7 @@ export default class Home extends Component {
 					links={links}
 					linkHover='default'
 					personalPhoto={personalPhoto}
-					dropdownContent={[
-						{ text: "Account", href: "account" },
-						{ text: "Log out", href: "logout" },
-					]}
+					dropdownContent={dropdownContent}
 				/>
 			</>
 		);
