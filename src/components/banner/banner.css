@@ -1,0 +1,32 @@
+.banner {
+	margin: auto auto;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.banner-list {
+	display: flexbox;
+	flex-direction: row;
+}
+
+.banner-list-item,
+.banner-list-item-cst {
+	font-size: 16px;
+}
+
+.banner-list-item-cst::after,
+.banner-list-item::before {
+	font-size: 22px;
+	content: "•";
+	padding-left: 14px;
+	padding-right: 14px;
+	color: rgb(29, 185, 84);
+}
+
+.banner-item {
+	padding: 30px 0;
+}

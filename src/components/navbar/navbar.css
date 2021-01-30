@@ -99,6 +99,7 @@
 	display: flex;
 	margin-left: 10px;
 	align-items: center;
+	cursor: pointer;
 }
 
 .navbar-button:focus {

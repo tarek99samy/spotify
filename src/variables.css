@@ -1,5 +1,17 @@
 :root {
 	--default-hover-color: #1ed760;
+	--text-xl-size: 80px;
+	--text-xl-weight: 900;
+	--text-lg-size: 64px;
+	--text-lg-weight: 900;
+	--text-md-size: 48px;
+	--text-md-weight: 900;
+	--text-sm-size: 32px;
+	--text-sm-weight: 900;
+	--text-xs-size: 18px;
+	--text-xs-weight: 400;
+	--text-xxs-size: 12px;
+	--text-xxs-weight: 400;
 
 	--navbar-height: 80px;
 	--navbar-logo-height: 40px;
