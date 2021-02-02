@@ -1,23 +1,80 @@
 :root {
-	--default-hover-color: #1ed760;
-	--text-xl-size: 80px;
-	--text-xl-weight: 900;
-	--text-lg-size: 64px;
-	--text-lg-weight: 900;
-	--text-md-size: 48px;
-	--text-md-weight: 900;
-	--text-sm-size: 32px;
-	--text-sm-weight: 900;
-	--text-xs-size: 18px;
-	--text-xs-weight: 400;
-	--text-xxs-size: 12px;
-	--text-xxs-weight: 400;
+	/******************* COLORS VARIABLES ************************/
+	--color-white: #ffffff;
 
-	--navbar-height: 80px;
-	--navbar-logo-height: 40px;
+	--color-transparent: #00000000;
+
+	--color-black: #000000;
+
+	--color-threethirds-black: rgba(0, 0, 0, 0.75);
+	--color-hlaf-black: rgba(0, 0, 0, 0.5);
+
+	--color-dark-grey: #616467;
+	--color-light-grey: #757575;
+	--color-lighter-grey: #534f4f;
+
+	--color-dark-green: #1db954;
+	--color-light-green: #1ed760; /* defualt hover color */
+
+	--color-skyblue: #b49bc8;
+	--color-blue: #4100f5;
+
+	--color-blue: #4100f5;
+	--color-blue: #4100f5;
+
+	/******************* TEXT VARIABLES ************************/
+	--text-size-xsuper: 5em;
+	--text-size-super: 4.5em;
+	--text-size-xlarge: 4em;
+	--text-size-large: 3.5em;
+	--text-size-xmedium: 3em;
+	--text-size-medium: 2.5em;
+	--text-size-xsmall: 2em;
+	--text-size-small: 1.5em;
+	--text-size-xtiny: 1em;
+	--text-size-tiny: 0.5em;
+
+	--text-weight-heavy: 900;
+	--text-weight-light: 400;
+
+	/******************* SPACING VARIABLES (1em == 16px, step = 4px) ************************/
+	--spacing-atomic: 0.25em;
+	--spacing-xatomic: 0.5em;
+	--spacing-xxatomic: 0.75em;
+	--spacing-micro: 1em;
+	--spacing-xmicro: 1.25em;
+	--spacing-xxmicro: 1.5em;
+	--spacing-tiny: 1.75em;
+	--spacing-xtiny: 2em;
+	--spacing-xxtiny: 2.25em;
+	--spacing-small: 2.5em;
+	--spacing-xsmall: 2.75em;
+	--spacing-xxsmall: 3em;
+	--spacing-reduced: 3.25em;
+	--spacing-xreduced: 3.5em;
+	--spacing-xxreduced: 3.75em;
+	--spacing-regular: 4em;
+	--spacing-xregular: 4.25em;
+	--spacing-xxregular: 4.5em;
+	--spacing-increased: 4.75em;
+	--spacing-xincreased: 5em;
+	--spacing-xxincreased: 5.25em;
+	--spacing-large: 5.5em;
+	--spacing-xlarge: 5.75em;
+	--spacing-xxlarge: 6em;
+	--spacing-huge: 6.25em;
+	--spacing-xhuge: 6.5em;
+	--spacing-xxhuge: 6.75em;
+	--spacing-giant: 7em;
+	--spacing-xgiant: 7.25em;
+	--spacing-xxgiant: 7.5em;
+
+	/******************* CUSTOM NAV & SIDE VARIABLES ************************/
+	--navbar-height: 5em;
+	--navbar-logo-height: 2.5em;
 	--navbar-mobile-view: none;
 	--navbar-desktop-view: block;
-	--navbar-personal-photo-size: 40px;
+	--navbar-personal-photo-size: var(--spacing-small);
 
-	--sidebar-width: 450px;
+	--sidebar-width: 28em;
 }

@@ -1,83 +1,90 @@
-.btn-fg-white {
-	color: #ffffff;
+.btn--fg__white {
+	color: var(--color-white);
 }
 
-.btn-fg-black {
-	color: #000000;
+.btn--fg__black {
+	color: var(--color-black);
 }
 
-.btn-fg-grey {
-	color: #757575;
+.btn--fg__grey {
+	color: var(--color-light-grey);
 }
 
-.btn-fg-sky {
-	color: #b49bc8;
+.btn--fg__sky {
+	color: var(--color-skyblue);
 }
 
-.btn-fg-blue {
-	color: #4100f5;
+.btn--fg__blue {
+	color: var(--color-blue);
 }
 
 /********************************/
 
-.btn-bg-white {
-	background-color: #ffffff;
+.btn--bg__white {
+	background-color: var(--color-white);
 }
 
-.btn-bg-white:hover {
+.btn--bg__white:hover {
 	transform: scale(1.04);
 }
 
-.btn-bg-black {
-	background-color: #000000;
+.btn--bg__black {
+	background-color: var(--color-black);
 }
 
-.btn-bg-black:hover {
-	background-color: #534f4f;
+.btn--bg__black:hover {
+	background-color: var(--color-lighter-grey);
 	transform: scale(1.04);
 }
 
-.btn-bg-green {
-	background-color: #1db954;
+.btn--bg__green {
+	background-color: var(--color-dark-green);
 }
 
-.btn-bg-green:hover {
-	background-color: #1ed760;
+.btn--bg__green:hover {
+	background-color: var(--color-light-green);
 	transform: scale(1.04);
 }
 
-.btn-bg-outline-grey-filled-hover {
-	background-color: #ffffff;
+.btn--bg__outline__greyhover {
+	background-color: var(--color-white);
 }
 
-.btn-bg-outline-grey-filled-hover:hover {
-	background-color: #616467;
+.btn--bg__outline__greyhover:hover {
+	background-color: var(--color-dark-grey);
 	transform: scale(1.04);
-	color: white;
+	color: var(--color-white);
 }
 
-.btn-bg-outline-grey {
-	background-color: white;
-	border-color: #757575;
+.btn--bg__outline__grey {
+	background-color: var(--color-white);
+	border-color: var(--color-light-grey);
 }
 
-.btn-bg-outline-grey:hover {
-	border-color: #000000;
-	color: #000000;
+.btn--bg__outline__grey:hover {
+	border-color: var(--color-black);
+	color: var(--color-black);
 }
 
 /********************************/
 
 .btn {
 	line-height: 1;
-	border-radius: 500px;
-	padding: 19px 56px 21px;
-	font-size: var(--text-xs-size);
-	min-width: 160px;
+	text-size-adjust: 100%;
+	letter-spacing: 2px;
+	border-radius: 31.25em;
+	padding: var(--spacing-xmicro) var(--spacing-xreduced);
 	border-top-width: 0px;
 	border-left-width: 0px;
 	border-right-width: 0px;
 	border-bottom-width: 0px;
 	text-transform: uppercase;
-	margin-bottom: 30px;
+	margin-bottom: var(--spacing-xtiny);
+	transition: background-color 0.3s;
+}
+
+@media only screen and (max-width: 290px) {
+	.btn {
+		padding: var(--spacing-xmicro);
+	}
 }

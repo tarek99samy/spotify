@@ -24,34 +24,34 @@ export default class Sidebar extends Component {
 	render() {
 		return (
 			<>
-				<div className='sidebar-toggle' onClick={this.toggleSidebar}>
+				<div className='sidebar__toggle text--xsmall' onClick={this.toggleSidebar}>
 					&#9776;
 				</div>
 
 				{this.state.isSidebarOpen ? <div className='overlay' onClick={this.toggleSidebar}></div> : null}
 
-				<div className={`sidebar-active ${!this.state.isSidebarOpen ? "sidebar-inactive" : null}`}>
-					<div className='sidebar-toggle sidebar-close-icon' onClick={this.toggleSidebar}>
+				<div className={`sidebar ${!this.state.isSidebarOpen ? "sidebar__inactive" : "sidebar__active"}`}>
+					<div className='sidebar__toggle sidebar__closeicon' onClick={this.toggleSidebar}>
 						&times;
 					</div>
-					<ul className='sidebar-content'>
-						{this.props.content.lg.map((data, i) => (
-							<li className='sidebar-item' key={i}>
+					<ul className='sidebar__content'>
+						{this.props.content.upperLinks.map((data, i) => (
+							<li className='sidebar__item' key={i}>
 								{"href" in data ? (
-									<a href={`${data.href}`} className={`sidebar-link sidebar-link-lg`}>
+									<a href={`${data.href}`} className={`sidebar__link text--xmedium`}>
 										{data.text}
 									</a>
 								) : (
-									<Link to={`/${data.to}`} className={`sidebar-link sidebar-link-lg`}>
+									<Link to={`/${data.to}`} className={`sidebar__link text--xmedium`}>
 										{data.text}
 									</Link>
 								)}
 							</li>
 						))}
-						<li role='separator' className='horizontal-separator'></li>
-						{this.props.content.md.map((data, i) => (
-							<li className='sidebar-item' key={i}>
-								<Link to={`/${data.to}`} className='sidebar-link sidebar-link-md'>
+						<li role='separator' className='sidebar__horizontalseparator'></li>
+						{this.props.content.lowerLinks.map((data, i) => (
+							<li className='sidebar__item' key={i}>
+								<Link to={`/${data.to}`} className='sidebar__link text--small'>
 									{data.text}
 								</Link>
 							</li>
