@@ -17,6 +17,7 @@
 	--color-light-green: #1ed760; /* defualt hover color */
 
 	--color-skyblue: #b49bc8;
+	--color-dark-skyblue: #919496;
 	--color-blue: #4100f5;
 
 	--color-blue: #4100f5;
@@ -37,7 +38,7 @@
 	--text-weight-heavy: 900;
 	--text-weight-light: 400;
 
-	/******************* SPACING VARIABLES (1em == 16px, step = 4px) ************************/
+	/******************* SPACING VARIABLES (step = 4px) ************************/
 	--spacing-atomic: 0.25em;
 	--spacing-xatomic: 0.5em;
 	--spacing-xxatomic: 0.75em;
@@ -68,6 +69,10 @@
 	--spacing-giant: 7em;
 	--spacing-xgiant: 7.25em;
 	--spacing-xxgiant: 7.5em;
+
+	--spacing-custom-1: 73.25em;
+	--spacing-custom-2: 58.75em;
+	--spacing-custom-3: 46.87em;
 
 	/******************* CUSTOM NAV & SIDE VARIABLES ************************/
 	--navbar-height: 5em;

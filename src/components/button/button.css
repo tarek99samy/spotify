@@ -48,6 +48,7 @@
 
 .btn--bg__outline__greyhover {
 	background-color: var(--color-white);
+	box-shadow: 0em 0em 0em 2px var(--color-dark-grey);
 }
 
 .btn--bg__outline__greyhover:hover {
@@ -58,11 +59,11 @@
 
 .btn--bg__outline__grey {
 	background-color: var(--color-white);
-	border-color: var(--color-light-grey);
+	box-shadow: 0em 0em 0em 2px var(--color-light-grey);
 }
 
 .btn--bg__outline__grey:hover {
-	border-color: var(--color-black);
+	box-shadow: 0em 0em 0em 2px var(--color-black);
 	color: var(--color-black);
 }
 
@@ -83,7 +84,7 @@
 	transition: background-color 0.3s;
 }
 
-@media only screen and (max-width: 290px) {
+@media only screen and (max-width: 320px) {
 	.btn {
 		padding: var(--spacing-xmicro);
 	}

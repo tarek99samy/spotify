@@ -1,12 +1,4 @@
 .banner {
-	width: 100%;
-	background-image: radial-gradient(ellipse at center, #f6cb6c 0%, #f3c65d 0%, #f2ae54 100%);
-	height: 40em;
-	overflow: hidden;
-	margin: auto;
-}
-
-.banner__container {
 	margin: auto auto;
 	display: flex;
 	flex-direction: column;
@@ -14,6 +6,7 @@
 	height: 100%;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
 }
 
 .banner__list {
@@ -36,7 +29,7 @@
 }
 
 .banner__item {
-	padding: var(--spacing-xtiny) 0;
+	padding-bottom: var(--spacing-xxmicro);
 }
 
 .banner__item--cst {
@@ -45,16 +38,8 @@
 	display: flex;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 770px) {
 	.banner__item--cst {
-		top: var(--spacing-xxmicro);
-	}
-
-	.banner {
-		height: 25em;
-	}
-
-	.banner__container {
-		justify-content: flex-end;
+		top: var(--spacing-regular);
 	}
 }

@@ -1,0 +1,74 @@
+.home__main__banner {
+	width: 100%;
+	background-image: radial-gradient(ellipse at center, #f6cb6c 0%, #f3c65d 0%, #f2ae54 100%);
+	height: 40em;
+	overflow: hidden;
+	margin: auto;
+}
+
+.home__tracks__container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: var(--spacing-tiny) auto var(--spacing-xreduced);
+}
+
+.home__albums__list {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0;
+	margin-top: var(--spacing-regular);
+}
+
+.home__albums__list__item {
+	width: 33.33333%;
+	height: 33.33333%;
+	padding: var(--spacing-xatomic);
+	transition: opacity 0.5s;
+}
+
+/****************** responsive handling *****************/
+
+@media (max-width: 768px) {
+	.home__main__banner {
+		height: 25em;
+	}
+
+	.home__albums__list {
+		width: 100%;
+		display: flex;
+		flex-flow: row;
+		overflow: hidden;
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+	}
+
+	.home__albums__list__item {
+		display: inline-block;
+		width: 24em;
+	}
+}
+
+@media (min-width: 768px) {
+	.home__tracks__container {
+		width: var(--spacing-custom-3);
+	}
+}
+
+@media (min-width: 992px) {
+	.home__tracks__container {
+		width: var(--spacing-custom-2);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.home__tracks__container {
+		width: var(--spacing-custom-1);
+	}
+}

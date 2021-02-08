@@ -6,43 +6,35 @@ export default class Banner extends Component {
 	render() {
 		return (
 			<div className='banner'>
-				<div className='banner__container'>
-					{this.props.content.map((element, index) =>
-						element.type === "link" ? (
-							<Button
-								fg={element.fg}
-								bg={element.bg}
-								href={element.href}
-								text={element.text}
-								key={index}
-							/>
-						) : element.type === "list" ? (
-							<div className='banner__item'>
-								<ul className='banner__list' key={index}>
-									{element.items.map((item, idx) =>
-										idx === 0 ? (
-											<li className='banner__list__item--cst' key={idx}>
-												{item}
-											</li>
-										) : (
-											<li className='banner__list__item' key={idx}>
-												{item}
-											</li>
-										)
-									)}
-								</ul>
-							</div>
-						) : element.type === "xtiny" ? (
-							<div className='banner__item banner__item--cst' key={index}>
-								<span className={`text--${element.type} text--${element.color}`}>{element.text}</span>
-							</div>
-						) : (
-							<div className='banner__item' key={index}>
-								<span className={`text--${element.type} text--${element.color}`}>{element.text}</span>
-							</div>
-						)
-					)}
-				</div>
+				{this.props.content.map((element, index) =>
+					element.type === "link" ? (
+						<Button fg={element.fg} bg={element.bg} href={element.href} text={element.text} key={index} />
+					) : element.type === "list" ? (
+						<div className='banner__item'>
+							<ul className='banner__list' key={index}>
+								{element.items.map((item, idx) =>
+									idx === 0 ? (
+										<li className='banner__list__item--cst' key={idx}>
+											{item}
+										</li>
+									) : (
+										<li className='banner__list__item' key={idx}>
+											{item}
+										</li>
+									)
+								)}
+							</ul>
+						</div>
+					) : element.text.includes("Terms") ? (
+						<div className='banner__item banner__item--cst' key={index}>
+							<span className={`text--${element.type} text--${element.color}`}>{element.text}</span>
+						</div>
+					) : (
+						<div className='banner__item' key={index}>
+							<span className={`text--${element.type} text--${element.color}`}>{element.text}</span>
+						</div>
+					)
+				)}
 			</div>
 		);
 	}

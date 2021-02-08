@@ -25,7 +25,7 @@
 .navbar__container {
 	-webkit-box-pack: justify;
 	justify-content: space-between;
-	max-width: 73.25em;
+	max-width: var(--spacing-custom-1);
 	margin: 0 auto;
 	padding: 0 var(--spacing-micro);
 	display: flex;

@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import Navbar from "../../components/navbar/navbar";
 import Banner from "../../components/banner/banner";
-import { bannerContent, navbarLinks, navbarDropdownContent } from "../../utilities/consts";
-import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
-// ************************************************
-import logo from "../../assets/logo.png";
-import personalPhoto from "../../assets/profile-photo.png";
+import AlbumCard from "../../components/album_card/album_card";
+import Footer from "../../components/footer/footer";
+import {
+	logo,
+	personalPhoto,
+	homeMainBannerContent,
+	homeNavbarLinks,
+	homeNavbarDropdownContent,
+	homePlayerBannerContent,
+	hometracks,
+} from "../../utilities/consts";
 import "./home.css";
 
 export default class Home extends Component {
@@ -21,14 +27,37 @@ export default class Home extends Component {
 				<Navbar
 					bgColor='default'
 					logo={logo}
-					links={navbarLinks}
+					links={homeNavbarLinks}
 					linkHoverColor='default'
 					personalPhoto={personalPhoto}
-					dropdownContent={navbarDropdownContent}
+					dropdownContent={homeNavbarDropdownContent}
 				/>
+
 				<section>
-					<Banner content={bannerContent} />
+					<div className='home__main__banner'>
+						<Banner content={homeMainBannerContent} />
+					</div>
 				</section>
+
+				<section>
+					<div className='home__tracks__container'>
+						<Banner content={homePlayerBannerContent} />
+						<ul className='home__albums__list'>
+							{hometracks.map((track, index) => (
+								<li className='home__albums__list__item' key={index}>
+									<AlbumCard
+										img={track.img}
+										title={track.title}
+										artist={track.artist}
+										link={track.link}
+									/>
+								</li>
+							))}
+						</ul>
+					</div>
+				</section>
+
+				<Footer />
 			</>
 		);
 	}
