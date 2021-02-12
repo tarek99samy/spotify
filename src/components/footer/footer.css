@@ -1,3 +1,61 @@
 .footer {
 	background-color: var(--color-black);
+	padding: var(--spacing-xincreased) 0;
+}
+
+.footer__container {
+	display: flex;
+	margin: auto 0px;
+	flex-direction: var(--footer-container-flex);
+}
+
+/********************************/
+
+.footer__logo__container {
+	display: block;
+	width: 16%;
+}
+
+.footer__logo {
+	display: block;
+	width: var(--footer-logo-size);
+}
+
+/********************************/
+
+.footer__nav__container {
+}
+
+.footer__list {
+}
+
+.footer__list__head {
+}
+
+.footer__list__item {
+}
+
+/********************************/
+
+.footer__media__container {
+}
+
+.footer__media__list {
+}
+
+.footer__media__list__item {
+}
+
+/********************************/
+
+.footer__policy__container {
+}
+
+.footer__policy__list {
+}
+
+.footer__policy__list__item {
+}
+
+.footer__policy__copyrights {
 }

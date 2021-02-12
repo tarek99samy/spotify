@@ -80,6 +80,10 @@
 	--navbar-mobile-view: none;
 	--navbar-desktop-view: block;
 	--navbar-personal-photo-size: var(--spacing-small);
-
+	
 	--sidebar-width: 28em;
+	
+	/******************* FOOTER VARIABLES ************************/
+	--footer-container-flex: row;
+	--footer-logo-size: 8em;
 }
