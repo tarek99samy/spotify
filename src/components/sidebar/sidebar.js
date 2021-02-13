@@ -24,7 +24,7 @@ export default class Sidebar extends Component {
 	render() {
 		return (
 			<>
-				<div className='sidebar__toggle text--xsmall' onClick={this.toggleSidebar}>
+				<div className='sidebar__toggle text--small' onClick={this.toggleSidebar}>
 					&#9776;
 				</div>
 

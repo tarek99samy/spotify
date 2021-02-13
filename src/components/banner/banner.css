@@ -14,13 +14,11 @@
 	flex-direction: row;
 }
 
-.banner__list__item,
-.banner__list__item--cst {
+.banner__list__item {
 	font-size: var(--text-size-xtiny);
 }
 
-.banner__list__item--cst::after,
-.banner__list__item::before {
+.banner__list__item:not(:last-child)::before {
 	font-size: var(--text-size-small);
 	content: "•";
 	padding-left: var(--spacing-micro);

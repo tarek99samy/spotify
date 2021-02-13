@@ -3,7 +3,7 @@ import authContext from "../../context/auth";
 import { Link } from "react-router-dom";
 import Sidebar from "../sidebar/sidebar";
 // ----------------- importing style sheets in strict order --------------------
-// import "../../variables.css";
+import "../../app.css";
 import "./navbar.css";
 
 export default class Navbar extends Component {
@@ -26,7 +26,7 @@ export default class Navbar extends Component {
 	render() {
 		return (
 			<header className={`navbar navbar--${this.props.bgColor}`}>
-				<div className='navbar__container'>
+				<div className='container navbar__container'>
 					<div className='navbar__logocontainer'>
 						<Link to='/'>
 							<img src={this.props.logo} className='navbar__logo' alt='Spotify' />

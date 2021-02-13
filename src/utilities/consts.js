@@ -69,3 +69,55 @@ export const hometracks = [
 	{ img: track5, title: "Holy Quran", artist: "Islam Sobhi", link: `webplayer/islamsobhi/quran` },
 	{ img: track6, title: "Surah Ad-Dukhan", artist: "Hazza Al Blushi", link: `webplayer/hazzaalblushi/addukhan` },
 ];
+
+export const footerData = {
+	navLists: [
+		{
+			header: "COMPANY",
+			links: [
+				{ href: "/about", text: "About" },
+				{ href: "https://www.spotifyjobs.com/", text: "Jops" },
+				{ href: "https://newsroom.spotify.com/", text: "For the Record" },
+			],
+		},
+		{
+			header: "COMMUNITIES",
+			links: [
+				{ href: "https://artists.spotify.com/", text: "For Artists" },
+				{ href: "https://developer.spotify.com/", text: "Developers" },
+				{ href: "https://ads.spotify.com/", text: "Advertising" },
+				{ href: "https://investors.spotify.com/", text: "Investors" },
+				{ href: "https://spotifyforvendors.com/", text: "Vendors" },
+			],
+		},
+		{
+			header: "USEFUL LINKS",
+			links: [
+				{ href: "/support", text: "Support" },
+				{ href: "/webplayer", text: "Web Player" },
+				{ href: "/download", text: "Free Mobile App" },
+			],
+		},
+	],
+	socialMedia: [
+		{
+			href: "https://instagram.com/spotify",
+			class: "instagram",
+		},
+		{
+			href: "https://twitter.com/spotify",
+			class: "twitter",
+		},
+		{
+			href: "https://www.facebook.com/Spotify",
+			class: "facebook",
+		},
+	],
+	policy: [
+		{ href: "https://www.spotify.com/eg-en/legal/", text: "Legal" },
+		{ href: "https://www.spotify.com/eg-en/privacy/", text: "Privacy Center" },
+		{ href: "https://www.spotify.com/eg-en/legal/privacy-policy/", text: "Privacy Policy" },
+		{ href: "https://www.spotify.com/eg-en/legal/cookies-policy/", text: "Cookies" },
+		{ href: "https://www.spotify.com/eg-en/legal/privacy-policy/#s3", text: "About Ads" },
+	],
+};

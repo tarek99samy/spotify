@@ -24,6 +24,10 @@
 
 .sidebar__content {
 	margin-top: var(--navbar-height);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: var(--spacing-xxtiny);
 }
 
 /***********************************/
@@ -85,7 +89,7 @@
 	}
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 990px) {
 	.overlay {
 		display: none;
 	}

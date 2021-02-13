@@ -28,7 +28,6 @@
 	max-width: var(--spacing-custom-1);
 	margin: 0 auto;
 	padding: 0 var(--spacing-micro);
-	display: flex;
 	height: inherit;
 }
 
@@ -135,8 +134,8 @@
 	height: var(--spacing-micro);
 	width: var(--spacing-xtiny);
 	position: absolute;
-	right: var(--spacing-atomic);
-	top: -var(--spacing-xxatomic);
+	right: var(--spacing-xxatomic);
+	top: calc(-1 * var(--spacing-xxatomic));
 	border-bottom: var(--spacing-micro) solid var(--color-white);
 	border-left: var(--spacing-micro) solid var(--color-transparent);
 	border-right: var(--spacing-micro) solid var(--color-transparent);
@@ -164,7 +163,7 @@
 
 /************************************************** media queries *************************************/
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 990px) {
 	:root {
 		--navbar-height: var(--spacing-xreduced);
 		--navbar-logo-height: var(--spacing-tiny);

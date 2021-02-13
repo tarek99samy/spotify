@@ -12,17 +12,11 @@ export default class Banner extends Component {
 					) : element.type === "list" ? (
 						<div className='banner__item'>
 							<ul className='banner__list' key={index}>
-								{element.items.map((item, idx) =>
-									idx === 0 ? (
-										<li className='banner__list__item--cst' key={idx}>
-											{item}
-										</li>
-									) : (
-										<li className='banner__list__item' key={idx}>
-											{item}
-										</li>
-									)
-								)}
+								{element.items.map((item, idx) => (
+									<li className='banner__list__item' key={idx}>
+										{item}
+									</li>
+								))}
 							</ul>
 						</div>
 					) : element.text.includes("Terms") ? (

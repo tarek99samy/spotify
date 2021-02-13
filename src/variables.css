@@ -9,6 +9,7 @@
 	--color-threethirds-black: rgba(0, 0, 0, 0.75);
 	--color-hlaf-black: rgba(0, 0, 0, 0.5);
 
+	--color-darker-gray: #222326;
 	--color-dark-grey: #616467;
 	--color-light-grey: #757575;
 	--color-lighter-grey: #534f4f;
@@ -33,6 +34,7 @@
 	--text-size-xsmall: 2em;
 	--text-size-small: 1.5em;
 	--text-size-xtiny: 1em;
+	--text-size-mid-tiny: 0.75em;
 	--text-size-tiny: 0.5em;
 
 	--text-weight-heavy: 900;
@@ -80,9 +82,9 @@
 	--navbar-mobile-view: none;
 	--navbar-desktop-view: block;
 	--navbar-personal-photo-size: var(--spacing-small);
-	
+
 	--sidebar-width: 28em;
-	
+
 	/******************* FOOTER VARIABLES ************************/
 	--footer-container-flex: row;
 	--footer-logo-size: 8em;

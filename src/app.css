@@ -12,8 +12,15 @@
 	box-sizing: border-box;
 }
 
-body {
+body,
+dd,
+dl,
+ul {
 	margin: 0;
+}
+
+ul {
+	padding: 0;
 }
 
 li {
@@ -22,11 +29,14 @@ li {
 
 a {
 	text-decoration: none;
+	color: unset;
 }
 
 a:hover {
 	text-decoration: none;
 }
+
+/*************************/
 
 .text--white {
 	color: var(--color-white);
@@ -81,9 +91,45 @@ a:hover {
 	font-weight: var(--text-weight-light);
 }
 
+.text--mid__tiny {
+	font-size: var(--text-size-mid-tiny);
+	font-weight: var(--text-weight-heavy);
+}
+
 .text--tiny {
 	font-size: var(--text-size-tiny);
 	font-weight: var(--text-weight-light);
+}
+
+.container {
+	display: flex;
+	margin: auto 0px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: var(--spacing-custom-3);
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: var(--spacing-custom-2);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: var(--spacing-custom-1);
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media only screen and (max-width: 980px) {

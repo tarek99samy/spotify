@@ -6,14 +6,9 @@
 	margin: auto;
 }
 
-.home__tracks__container {
-	display: flex;
-	flex-wrap: wrap;
+.home__tracks {
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	margin: var(--spacing-tiny) auto var(--spacing-xreduced);
+	margin: var(--spacing-xincreased) auto var(--spacing-xxgiant);
 }
 
 .home__albums__list {
@@ -53,22 +48,8 @@
 	}
 }
 
-@media (min-width: 768px) {
-	.home__tracks__container {
-		width: var(--spacing-custom-3);
-	}
-}
-
-@media (min-width: 992px) {
-	.home__tracks__container {
-		width: var(--spacing-custom-2);
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-@media (min-width: 1200px) {
-	.home__tracks__container {
-		width: var(--spacing-custom-1);
+@media (max-width: 600px) {
+	.home__albums__list__item {
+		width: 10em;
 	}
 }

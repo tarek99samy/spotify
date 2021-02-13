@@ -11,7 +11,9 @@ import {
 	homeNavbarDropdownContent,
 	homePlayerBannerContent,
 	hometracks,
+	footerData,
 } from "../../utilities/consts";
+import "../../app.css";
 import "./home.css";
 
 export default class Home extends Component {
@@ -40,7 +42,7 @@ export default class Home extends Component {
 				</section>
 
 				<section>
-					<div className='home__tracks__container'>
+					<div className='container home__tracks'>
 						<Banner content={homePlayerBannerContent} />
 						<ul className='home__albums__list'>
 							{hometracks.map((track, index) => (
@@ -57,7 +59,7 @@ export default class Home extends Component {
 					</div>
 				</section>
 
-				<Footer logo={logo} />
+				<Footer logo={logo} data={footerData} />
 			</>
 		);
 	}
