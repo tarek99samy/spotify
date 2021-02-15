@@ -14,6 +14,7 @@
 	--color-light-grey: #757575;
 	--color-lighter-grey: #534f4f;
 
+	--color-pure-green: #19e68c;
 	--color-dark-green: #1db954;
 	--color-light-green: #1ed760; /* defualt hover color */
 
@@ -75,6 +76,7 @@
 	--spacing-custom-1: 73.25em;
 	--spacing-custom-2: 58.75em;
 	--spacing-custom-3: 46.87em;
+	--spacing-custom-4: 32em;
 
 	/******************* CUSTOM NAV & SIDE VARIABLES ************************/
 	--navbar-height: 5em;

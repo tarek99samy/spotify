@@ -73,7 +73,7 @@
 	line-height: 1;
 	text-size-adjust: 100%;
 	letter-spacing: 2px;
-	border-radius: 31.25em;
+	border-radius: var(--spacing-custom-4);
 	padding: var(--spacing-xmicro) var(--spacing-xreduced);
 	border-top-width: 0px;
 	border-left-width: 0px;

@@ -7,15 +7,23 @@ import track4 from "../assets/tracks/imgs/track4.jpeg";
 import track5 from "../assets/tracks/imgs/track5.jpeg";
 import track6 from "../assets/tracks/imgs/track6.jpeg";
 
+import labtop from "../assets/download/laptop.svg";
+import greenCircle from "../assets/download/green-circle.svg";
+import greenSuccessCheck from "../assets/download/green-success-check.svg";
+import microsoft from "../assets/download/microsoft.png";
+import appStore from "../assets/download/app-store.png";
+import googlePlay from "../assets/download/google-play.png";
+import devices from "../assets/download/all-devices.svg";
+
 export { logo, personalPhoto };
 
-export const homeNavbarLinks = [
+export const navbarLinks = [
 	{ text: "Premium", to: "premium" },
 	{ text: "Support", href: "https://support.spotify.com/eg-en/" },
 	{ text: "Download", to: "download" },
 ];
 
-export const homeNavbarDropdownContent = [
+export const navbarDropdownContent = [
 	{ text: "Account", to: "account" },
 	{ text: "Log out", to: "logout" },
 ];
@@ -24,6 +32,7 @@ export const homeMainBannerContent = [
 	{ type: "xsuper", text: "Go Premium. Be happy.", color: "white" },
 	{
 		type: "link",
+		isDownload: false,
 		text: "start free trial",
 		href: "premium",
 		fg: "white",
@@ -49,6 +58,7 @@ export const homePlayerBannerContent = [
 	},
 	{
 		type: "link",
+		isDownload: false,
 		text: "launch web player",
 		href: "webplayer",
 		fg: "grey",
@@ -121,3 +131,58 @@ export const footerData = {
 		{ href: "https://www.spotify.com/eg-en/legal/privacy-policy/#s3", text: "About Ads" },
 	],
 };
+
+export { labtop, greenCircle, greenSuccessCheck, devices };
+
+export const downloadMainBannerContent = [
+	{
+		type: "xmedium",
+		text: "Download Spotify",
+		color: "black",
+	},
+	{
+		type: "xtiny",
+		text: "Play millions of songs and podcasts on your device.",
+		color: "black",
+	},
+	{
+		type: "link",
+		text: "download",
+		isDownload: true,
+		filename: "SpotifySetup.exe",
+		fg: "black",
+		bg: "white",
+	},
+];
+
+export const downloadDevicesBannerContent = [
+	{
+		type: "xsmall",
+		text: "One account, listen everywhere.",
+		color: "white",
+	},
+	{
+		type: "list",
+		items: ["MOBILE", "COMPUTER", "TABLET", "CAR", "PLAYSTATION®", "XBOX", "TV", "SPEAKER", "WEB PLAYER"],
+	},
+];
+
+export const downloadSotres = [
+	{
+		logo: appStore,
+		text: "Download on the App Store",
+		href:
+			"https://app.adjust.com/wp2zrj?adgroup=app_showcase&campaign=default&creative=control&label=sp_cid%3A10f6891e-091b-4a0b-939e-2be4f541e79b&tracker_limit=250000",
+	},
+	{
+		logo: googlePlay,
+		text: "Get it on Google Play",
+		href:
+			"https://app.adjust.com/ff0trr?adgroup=app_showcase&campaign=default&creative=control&label=sp_cid%3A10f6891e-091b-4a0b-939e-2be4f541e79b&tracker_limit=250000",
+	},
+	{
+		logo: microsoft,
+		text: "Get it from Microsoft",
+		href: "https://www.microsoft.com/store/p/spotify-music/9ncbcszsjrsb?cid=spotifyweb-windows10-store-direct",
+	},
+];

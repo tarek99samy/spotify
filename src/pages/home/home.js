@@ -7,8 +7,8 @@ import {
 	logo,
 	personalPhoto,
 	homeMainBannerContent,
-	homeNavbarLinks,
-	homeNavbarDropdownContent,
+	navbarLinks,
+	navbarDropdownContent,
 	homePlayerBannerContent,
 	hometracks,
 	footerData,
@@ -29,10 +29,10 @@ export default class Home extends Component {
 				<Navbar
 					bgColor='default'
 					logo={logo}
-					links={homeNavbarLinks}
+					links={navbarLinks}
 					linkHoverColor='default'
 					personalPhoto={personalPhoto}
-					dropdownContent={homeNavbarDropdownContent}
+					dropdownContent={navbarDropdownContent}
 				/>
 
 				<section>

@@ -6,11 +6,20 @@ export default class Button extends Component {
 	render() {
 		return (
 			<div>
-				<Link
-					className={`btn text--xtiny btn--fg__${this.props.fg} btn--bg__${this.props.bg}`}
-					to={`/${this.props.href}`}>
-					{this.props.text}
-				</Link>
+				{this.props.isDownload ? (
+					<a
+						href='/'
+						className={`btn text--xtiny btn--fg__${this.props.fg} btn--bg__${this.props.bg}`}
+						download={this.props.filename}>
+						{this.props.text}
+					</a>
+				) : (
+					<Link
+						className={`btn text--xtiny btn--fg__${this.props.fg} btn--bg__${this.props.bg}`}
+						to={`/${this.props.href}`}>
+						{this.props.text}
+					</Link>
+				)}
 			</div>
 		);
 	}
