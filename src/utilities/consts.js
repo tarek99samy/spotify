@@ -15,6 +15,11 @@ import appStore from "../assets/download/app-store.png";
 import googlePlay from "../assets/download/google-play.png";
 import devices from "../assets/download/all-devices.svg";
 
+import whyPremiumImg1 from "../assets/premium/why1.png";
+import whyPremiumImg2 from "../assets/premium/why2.png";
+import whyPremiumImg3 from "../assets/premium/why3.png";
+import whyPremiumImg4 from "../assets/premium/why4.png";
+
 export { logo, personalPhoto };
 
 export const navbarLinks = [
@@ -184,5 +189,112 @@ export const downloadSotres = [
 		logo: microsoft,
 		text: "Get it from Microsoft",
 		href: "https://www.microsoft.com/store/p/spotify-music/9ncbcszsjrsb?cid=spotifyweb-windows10-store-direct",
+	},
+];
+
+export const premiumBannerContent = [
+	{ type: "xsuper", text: "Get Premium free for 1 month", color: "white" },
+	{ type: "xsmall", text: "Just EGP 49.99/month after. Cancel anytime.", color: "white" },
+	{ type: "link", isDownload: false, text: "VIEW PLANS", href: "#plans", fg: "white", bg: "black" },
+	{
+		type: "mid__tiny",
+		text: "Terms and conditions apply. 1 month free not available for users who have already tried Premium.",
+		color: "white",
+	},
+];
+
+export const whyPremium = [
+	{
+		img: whyPremiumImg1,
+		description: [
+			{ type: "small", text: "Download music.", color: "black" },
+			{ type: "xtiny", text: "Listen anywhere.", color: "black" },
+		],
+	},
+	{
+		img: whyPremiumImg2,
+		description: [
+			{ type: "small", text: "No ad interruptions.", color: "black" },
+			{ type: "xtiny", text: "Enjoy uninterrupted music.", color: "black" },
+		],
+	},
+	{
+		img: whyPremiumImg3,
+		description: [
+			{ type: "small", text: "Play any song.", color: "black" },
+			{ type: "xtiny", text: "Even on mobile.", color: "black" },
+		],
+	},
+	{
+		img: whyPremiumImg4,
+		description: [
+			{ type: "small", text: "Unlimited skips.", color: "black" },
+			{ type: "xtiny", text: "Just hit next.", color: "black" },
+		],
+	},
+];
+
+export const premiumPlans = [
+	{
+		description: [
+			{ type: "xtiny", text: "1 month free with subscription", color: "white", bgColor: "light-blue" },
+			{ type: "xtiny", text: "Prepaid plans available", color: "light-blue", bgColor: "white" },
+			{ type: "small", text: "Individual", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "EGP 49.99/month after offer period", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "1 account", color: "black", bgColor: "" },
+		],
+		features: [
+			"Listen to music ad-free",
+			"Play anywhere - even offline",
+			"On-demand playback",
+			"Prepay or subscribe",
+		],
+		navigateToPlan: {
+			text: "get started",
+			fg: "white",
+			bg: "black",
+			href: "individual",
+		},
+	},
+	{
+		description: [
+			{ type: "xtiny", text: "1 month free", color: "white", bgColor: "light-blue" },
+			{ type: "small", text: "Duo", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "EGP 64.99/month after offer period", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "2 accounts", color: "black", bgColor: "" },
+		],
+		features: [
+			"2 Premium accounts for a couple under one roof",
+			"Duo Mix: a playlist for two, regularly updated with music you both enjoy",
+			"Ad-free music listening, play offline, on-demand playback",
+		],
+		navigateToPlan: {
+			text: "get started",
+			fg: "white",
+			bg: "black",
+			href: "duo",
+		},
+	},
+	{
+		description: [
+			{ type: "xtiny", text: "1 month free with subscription", color: "white", bgColor: "light-blue" },
+			{ type: "xtiny", text: "Prepaid plans available", color: "light-blue", bgColor: "white" },
+			{ type: "small", text: "Family", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "EGP 79.99/month after offer period", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "Up to 6 accounts", color: "black", bgColor: "" },
+		],
+		features: [
+			"6 Premium accounts for family members living under one roof",
+			"Family Mix: a playlist for your family, regularly updated with music you all enjoy",
+			"Block explicit music",
+			"Ad-free music listening, play offline, on-demand playback",
+			"Prepay or subscribe",
+		],
+		navigateToPlan: {
+			text: "get started",
+			fg: "white",
+			bg: "black",
+			href: "family",
+		},
 	},
 ];

@@ -1,6 +1,7 @@
 :root {
 	/******************* COLORS VARIABLES ************************/
 	--color-white: #ffffff;
+	--color-off-white: #cccccc;
 
 	--color-transparent: #00000000;
 
@@ -20,10 +21,9 @@
 
 	--color-skyblue: #b49bc8;
 	--color-dark-skyblue: #919496;
-	--color-blue: #4100f5;
 
-	--color-blue: #4100f5;
-	--color-blue: #4100f5;
+	--color-light-blue: #2e77d0;
+	--color-dark-blue: #4100f5;
 
 	/******************* TEXT VARIABLES ************************/
 	--text-size-xsuper: 5em;

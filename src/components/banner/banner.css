@@ -40,14 +40,13 @@
 }
 
 .banner__item--cst {
-	position: relative;
-	top: 12em;
-	display: flex;
+	display: block;
+	margin-top: 10%;
 }
 
 @media (max-width: 770px) {
 	.banner__item--cst {
-		top: var(--spacing-regular);
+		margin-bottom: -20%;
 	}
 }
 
