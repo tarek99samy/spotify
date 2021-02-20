@@ -5,10 +5,10 @@
 	margin: auto auto;
 	display: flex;
 	flex-direction: column;
-	text-align: inherit;
+	text-align: center;
 	height: 100%;
-	align-items: inherit;
-	justify-content: inherit;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 }
 
@@ -37,6 +37,17 @@
 
 .banner__item {
 	padding-bottom: var(--spacing-xxmicro);
+}
+
+.banner__item--cst {
+	display: block;
+	margin-top: 10%;
+}
+
+@media (max-width: 770px) {
+	.banner__item--cst {
+		margin-bottom: -20%;
+	}
 }
 
 @media (max-width: 500px) {

@@ -16,36 +16,11 @@ import PremiumPlan from "../../components/premium_plan/premium_plan";
 import "./premium.css";
 
 class Premium extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			isScrollY: false,
-			isNavbarMounted: true,
-		};
-		this.changeBackgroundNavbar = this.changeBackgroundNavbar.bind(this);
-		this.navbarMount = this.navbarMount.bind(this);
-	}
-
-	changeBackgroundNavbar() {
-		if (this.state.isNavbarMounted) {
-			if (window.scrollY >= 30) this.setState({ isScrollY: true });
-			else this.setState({ isScrollY: false });
-		}
-	}
-
-	navbarMount() {
-		if (window.outerWidth >= 990) this.setState({ isNavbarMounted: true });
-		else this.setState({ isNavbarMounted: false });
-	}
-
 	render() {
-		window.addEventListener("scroll", this.changeBackgroundNavbar);
-		window.addEventListener("resize", this.navbarMount);
 		return (
 			<>
 				<Navbar
-					bgColor={this.state.isScrollY ? "default" : "transparent"}
+					bgColor='transparent'
 					logo={logo}
 					links={navbarLinks}
 					linkHoverColor='default'
@@ -60,13 +35,13 @@ class Premium extends Component {
 				</section>
 
 				<section>
-					<div className='container premium__why__container'>
-						<span className='text--black text--xmedium'>Why go Premium?</span>
+					<div className='container'>
+						<span className='text--white text--xmedium'>Why go Premium?</span>
 						<ul className='premium__why'>
 							{whyPremium.map((plan, index1) => (
 								<li className='premium__why__item' key={index1}>
-									<div className='premium__why__item__img__container'>
-										<img src={plan.img} alt='' className='premium__why__item__img' />
+									<div className='premium__why__item__img'>
+										<img src={plan.img} alt='' className='' />
 									</div>
 									<div className='premium__why__item__desc'>
 										{plan.description.map((desc, index2) => (

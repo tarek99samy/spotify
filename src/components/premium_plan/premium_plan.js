@@ -8,9 +8,7 @@ class PremiumPlan extends Component {
 			<div className='plan'>
 				<div className='plan__description'>
 					{this.props.content.description.map((item, index) => (
-						<span
-							className={`text--${item.type} text--${item.color} text--bg-${item.bgColor} plan__description__item`}
-							key={index}>
+						<span className={`text--${item.type} text--${item.color} text--bg-${item.bgColor}`} key={index}>
 							{item.text}
 						</span>
 					))}
@@ -18,10 +16,9 @@ class PremiumPlan extends Component {
 				<hr className='plan__separator' />
 				<div className='plan__features'>
 					{this.props.content.features.map((item, index) => (
-						<div className='plan__features__item' key={index}>
-							<span className='text--black text--small'>&#10003;</span>
-							<span className='text--black text--xtiny plan__features__item__text'>{item}</span>
-						</div>
+						<span className='text--black text--xtiny' key={index}>
+							&#2713; {item}
+						</span>
 					))}
 				</div>
 				<Button

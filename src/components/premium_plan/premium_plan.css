@@ -1,51 +1,29 @@
 .plan {
-	max-width: calc(var(--spacing-tiny) + (4 * var(--spacing-xincreased)));
-	width: auto;
+	width: calc(var(--spacing-xxatomic) + (4 * var(--spacing-xincreased)));
 	display: flex;
 	flex-direction: column;
 	margin: var(--spacing-micro);
 	padding: var(--spacing-micro);
 	border-radius: var(--spacing-xxatomic);
 	box-shadow: var(--color-white) 0px var(--spacing-xatomic) 0px 0px, rgb(0 0 0 / 30%) 0px 0px var(--spacing-xatomic);
-	border: 2px solid var(--color-off-white);
-	justify-content: flex-start;
 }
 
 .plan__description {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: flex-start;
-	text-align: start;
-	height: 30%;
-}
-
-.plan__description__item {
-	padding: var(--spacing-atomic);
-	margin: var(--spacing-atomic) 0;
 }
 
 .plan__separator {
 	border: 1px solid var(--color-off-white);
-	width: 100%;
 }
 
 .plan__features {
-	height: 45%;
+	height: calc(var(--spacing-xincreased) * 3);
 	display: flex;
 	flex-direction: column;
 	padding-top: var(--spacing-micro);
-	text-align: start;
-}
-
-.plan__features__item {
-	display: flex;
-	line-height: var(--spacing-xxmicro);
-	margin-bottom: var(--spacing-xxatomic);
-}
-
-.plan__features__item__text {
-	padding-left: var(--spacing-xatomic);
+	align-items: flex-start;
 }
 
 .plan__terms {
