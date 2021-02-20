@@ -195,7 +195,7 @@ export const downloadSotres = [
 export const premiumBannerContent = [
 	{ type: "xsuper", text: "Get Premium free for 1 month", color: "white" },
 	{ type: "xsmall", text: "Just EGP 49.99/month after. Cancel anytime.", color: "white" },
-	{ type: "link", isDownload: false, text: "VIEW PLANS", href: "#plans", fg: "white", bg: "black" },
+	{ type: "link", isDownload: false, text: "VIEW PLANS", href: "premium#plans", fg: "white", bg: "black" },
 	{
 		type: "mid__tiny",
 		text: "Terms and conditions apply. 1 month free not available for users who have already tried Premium.",

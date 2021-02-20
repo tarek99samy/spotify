@@ -4,6 +4,9 @@
 	height: 40em;
 	overflow: hidden;
 	margin: auto;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .home__tracks {
@@ -31,6 +34,7 @@
 @media (max-width: 768px) {
 	.home__main__banner {
 		height: 25em;
+		justify-content: flex-end;
 	}
 
 	.home__albums__list {
