@@ -1,19 +1,28 @@
 .premium__banner__section {
-	background-color: var(--color-light-blue);
-	width: 100%;
-	height: var(--spacing-custom-4);
+	background-color: var(--color-deep-skyblue);
 }
 
 .premium__banner {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-	min-height: max-content;
+	padding: calc(var(--spacing-giant) + var(--spacing-small)) var(--spacing-micro) var(--spacing-increased);
+}
+
+.premium__why__container {
+	padding: var(--spacing-xincreased) var(--spacing-micro);
 }
 
 .premium__why {
+	--premium-why-img-size: calc(var(--spacing-xtiny) + var(--spacing-xxhuge));
+
+	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	padding-top: var(--spacing-increased);
 }
 
 .premium__why__item {
@@ -22,6 +31,11 @@
 }
 
 .premium__why__item__img {
+	height: var(--premium-why-img-size);
+	width: var(--premium-why-img-size);
+}
+
+.premium__why__item__img__container {
 	display: block;
 	margin: 0 auto var(--spacing-small);
 }
@@ -33,6 +47,7 @@
 	justify-content: center;
 	align-items: center;
 	margin: var(--spacing-micro) 0;
+	width: 100%;
 }
 
 /***********************/
@@ -40,9 +55,65 @@
 .premium__plans__section {
 	display: flex;
 	flex-direction: column;
+	padding: var(--spacing-increased) var(--spacing-micro);
 }
 
 .premium__plans__list {
 	display: flex;
 	flex-flow: row wrap;
+	padding: var(--spacing-xxsmall) 0;
+}
+
+/***********************/
+
+@media (max-width: 1200px) {
+	.premium__why {
+		--premium-why-img-size: var(--spacing-xhuge);
+	}
+
+	.premium__plans__list {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 996px) {
+	.premium__why {
+		--premium-why-img-size: var(--spacing-xxlarge);
+	}
+
+	.premium__why__item {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: var(--spacing-small);
+		width: 50%;
+	}
+
+	.premium__why__item__img__container {
+		margin: 0 var(--spacing-micro) 0 0;
+	}
+
+	.premium__why__item__desc {
+		text-align: flex-start;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: 768px) {
+	.premium__why {
+		--premium-why-img-size: var(--spacing-giant);
+
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.premium__why__item {
+		width: 100%;
+	}
+
+	.premium__banner {
+		padding: calc(var(--spacing-xincreased) + var(--spacing-xxsmall)) var(--spacing-micro) var(--spacing-tiny);
+	}
 }

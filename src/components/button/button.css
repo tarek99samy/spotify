@@ -35,6 +35,7 @@
 .btn--bg__black:hover {
 	background-color: var(--color-lighter-grey);
 	transform: scale(1.04);
+	border: 1px solid var(--color-black);
 }
 
 .btn--bg__green {
@@ -70,6 +71,7 @@
 /********************************/
 
 .btn {
+	display: inherit;
 	line-height: 1;
 	text-size-adjust: 100%;
 	letter-spacing: 2px;

@@ -28,10 +28,6 @@ export default class Banner extends Component {
 								))}
 							</ul>
 						</div>
-					) : element.text.includes("Terms") ? (
-						<div className='banner__item banner__item--cst' key={index}>
-							<span className={`text--${element.type} text--${element.color}`}>{element.text}</span>
-						</div>
 					) : (
 						<div className='banner__item' key={index}>
 							<span className={`text--${element.type} text--${element.color}`}>{element.text}</span>
