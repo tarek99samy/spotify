@@ -16,6 +16,7 @@ export default class Banner extends Component {
 							isDownload={element.isDownload}
 							filename={element.filename}
 							key={index}
+							callback={element.callback}
 						/>
 					) : element.type === "list" ? (
 						<div className='banner__item' key={index}>
@@ -26,10 +27,6 @@ export default class Banner extends Component {
 									</li>
 								))}
 							</ul>
-						</div>
-					) : element.text.includes("Terms") ? (
-						<div className='banner__item banner__item--cst' key={index}>
-							<span className={`text--${element.type} text--${element.color}`}>{element.text}</span>
 						</div>
 					) : (
 						<div className='banner__item' key={index}>

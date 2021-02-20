@@ -148,7 +148,7 @@ a:hover {
 	}
 }
 
-@media only screen and (max-width: 980px) {
+@media (max-width: 980px) {
 	.text--xsuper {
 		font-size: var(--text-size-xlarge);
 	}
@@ -162,12 +162,22 @@ a:hover {
 	}
 }
 
-@media only screen and (max-width: 760px) {
+@media (max-width: 760px) {
 	.text--xsuper {
 		font-size: var(--text-size-xmedium);
 	}
 
 	.text--xlarge {
+		font-size: var(--text-size-xsmall);
+	}
+
+	.text--xsmall {
+		font-size: var(--text-size-small);
+	}
+}
+
+@media (max-width: 480px) {
+	.text--xsuper {
 		font-size: var(--text-size-xsmall);
 	}
 }

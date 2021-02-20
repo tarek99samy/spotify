@@ -16,7 +16,8 @@ export default class Button extends Component {
 				) : (
 					<Link
 						className={`btn text--xtiny btn--fg__${this.props.fg} btn--bg__${this.props.bg}`}
-						to={`/${this.props.href}`}>
+						to={`/${this.props.href}`}
+						onClick={this.props.callback}>
 						{this.props.text}
 					</Link>
 				)}
