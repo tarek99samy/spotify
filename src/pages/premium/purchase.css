@@ -1,0 +1,21 @@
+.purchase__banner {
+	background-color: var(--color-darker-blue);
+	width: 100%;
+}
+
+.purchase__preview {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	padding: calc(var(--navbar-height) + var(--spacing-xxincreased)) var(--spacing-xxtiny);
+	flex-direction: column;
+}
+
+.purchase__features {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.purchase__features__item {
+}

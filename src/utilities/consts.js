@@ -248,7 +248,7 @@ export const premiumPlans = [
 			{ type: "xtiny", text: "1 month free with subscription", color: "white", bgColor: "light-blue" },
 			{ type: "xtiny", text: "Prepaid plans available", color: "light-blue", bgColor: "white" },
 			{ type: "small", text: "Individual", color: "black", bgColor: "" },
-			{ type: "xtiny", text: "EGP 49.99/month after offer period", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "49.99 EGP / month after offer period", color: "black", bgColor: "" },
 			{ type: "xtiny", text: "1 account", color: "black", bgColor: "" },
 		],
 		features: [
@@ -268,7 +268,7 @@ export const premiumPlans = [
 		description: [
 			{ type: "xtiny", text: "1 month free", color: "white", bgColor: "light-blue" },
 			{ type: "small", text: "Duo", color: "black", bgColor: "" },
-			{ type: "xtiny", text: "EGP 64.99/month after offer period", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "64.99 EGP / month after offer period", color: "black", bgColor: "" },
 			{ type: "xtiny", text: "2 accounts", color: "black", bgColor: "" },
 		],
 		features: [
@@ -288,7 +288,7 @@ export const premiumPlans = [
 			{ type: "xtiny", text: "1 month free with subscription", color: "white", bgColor: "light-blue" },
 			{ type: "xtiny", text: "Prepaid plans available", color: "light-blue", bgColor: "white" },
 			{ type: "small", text: "Family", color: "black", bgColor: "" },
-			{ type: "xtiny", text: "EGP 79.99/month after offer period", color: "black", bgColor: "" },
+			{ type: "xtiny", text: "79.99 EGP / month after offer period", color: "black", bgColor: "" },
 			{ type: "xtiny", text: "Up to 6 accounts", color: "black", bgColor: "" },
 		],
 		features: [
@@ -306,3 +306,18 @@ export const premiumPlans = [
 		},
 	},
 ];
+
+export const purchaseInfo = {
+	individual: {
+		price: "49.99 EGP / month",
+		features: premiumPlans[0].features,
+	},
+	duo: {
+		price: "64.99 EGP / month",
+		features: premiumPlans[1].features,
+	},
+	family: {
+		price: "79.99 EGP / month",
+		features: premiumPlans[2].features,
+	},
+};

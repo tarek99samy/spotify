@@ -27,7 +27,7 @@ class PremiumPlan extends Component {
 				<Button
 					fg={this.props.content.navigateToPlan.fg}
 					bg={this.props.content.navigateToPlan.bg}
-					href={`/plan/${this.props.content.navigateToPlan.href}`}
+					href={`premium/plan/${this.props.content.navigateToPlan.href}`}
 					text={this.props.content.navigateToPlan.text}
 				/>
 				<div className='plan__terms'>
