@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { logo, navbarLinks, personalPhoto, navbarDropdownContent, purchaseInfo } from "../../utilities/consts";
 import Navbar from "../../components/navbar/navbar";
+import Button from "../../components/button/button";
 import "./purchase.css";
-import { withRouter } from "react-router-dom";
 
 class Purchase extends Component {
 	constructor(props) {
@@ -10,7 +11,10 @@ class Purchase extends Component {
 
 		this.state = {
 			planDetails: { name: "", price: "", features: [] },
+			paymentData: { cardNumber: 0, expireDate: "", securityCode: "" },
 		};
+
+		this.handlePaymentInput = this.handlePaymentInput.bind(this);
 	}
 
 	componentDidMount() {
@@ -26,8 +30,12 @@ class Purchase extends Component {
 		}));
 	}
 
+	handlePaymentInput(event) {
+		this.setState({ paymentDate: { card: event.target.value } });
+	}
+
 	render() {
-		console.log(this.state.planDetails);
+		console.log(this.state.paymentData);
 		return (
 			<>
 				<Navbar
@@ -62,25 +70,34 @@ class Purchase extends Component {
 						</span>
 						<span className='text--black text--xtiny'>Cancel anytime. Offer terms apply</span>
 					</div>
-					{/* <div className="purchase__payment">
-						<form>
+					<div className='purchase__payment'>
+						<form className='purchase__payment__form'>
 							<input
-								type='tel'
-								autoComplete='cc-number'
+								className='purchase__payment__form__input'
+								type='number'
+								name='cardNumber'
 								pattern='[0-9]*'
 								placeholder='0000 0000 0000 0000'
-								onChange={}
+								onChange={this.handlePaymentInput}
 							/>
-							<input type='tel' autoComplete='cc-exp' placeholder='MM / YY' onChange={} />
 							<input
+								className='purchase__payment__form__input'
 								type='number'
-								autocomplete='off'
+								name='expireDate'
+								placeholder='MM / YY'
+								onChange={this.handlePaymentInput}
+							/>
+							<input
+								className='purchase__payment__form__input'
+								type='number'
+								name='securityCode'
 								pattern='[0-9]*'
 								placeholder='Security code'
-								onChange={}
+								onChange={this.handlePaymentInput}
 							/>
 						</form>
-					</div> */}
+					</div>
+					<Button fg='white' bg='green' href='' text='Buy Spotify Premium Duo' />
 				</section>
 			</>
 		);
