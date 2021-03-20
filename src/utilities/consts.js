@@ -309,15 +309,27 @@ export const premiumPlans = [
 
 export const purchaseInfo = {
 	individual: {
-		price: "49.99 EGP / month",
-		features: premiumPlans[0].features,
+		price: "49.99 EGP / month after trial",
+		features: [
+			" Listen without the distraction of ads",
+			"Play music with no phone service",
+			"Skip as many songs as you want",
+		],
 	},
 	duo: {
-		price: "64.99 EGP / month",
-		features: premiumPlans[1].features,
+		price: "64.99 EGP / month after trial",
+		features: [
+			"2 separate Premium accounts for two people who share a home",
+			"Set up at home, listen anywhere",
+			"Duo Mix playlist for two",
+		],
 	},
 	family: {
-		price: "79.99 EGP / month",
-		features: premiumPlans[2].features,
+		price: "79.99 EGP / month after trial",
+		features: [
+			"6 Premium accounts for family members under one roof",
+			"Family Mix playlist",
+			"Parental control of explicit content",
+		],
 	},
 };

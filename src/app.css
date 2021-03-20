@@ -171,6 +171,10 @@ a:hover {
 		font-size: var(--text-size-xsmall);
 	}
 
+	.text--large {
+		font-size: var(--text-size-small);
+	}
+
 	.text--xsmall {
 		font-size: var(--text-size-small);
 	}
