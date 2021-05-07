@@ -1,7 +1,7 @@
 # A spotify mimic
 
 ### About the project
->  It is currently developed. The project tries to mimic many pages from the Spotify webApp in mobile first approach
+>  It is currently developed. The project tries to mimic many pages from the Spotify webApp in mobile first approach, the web player pages and premium actions not implemented yet
 
 ### Technologies
 
